@@ -38,7 +38,7 @@ jobs:
         env:
           MQL_REFERENCE_FIXTURES: upstream-parser/docs/fixtures/semantic-ir/reference-fixtures.json
           MQL_MAJORS_ROOT: upstream-majors/majors/2627
-      - run: ruff check .
+      - run: ruff check src tests
       - run: mypy src
       - run: python -m build
       - run: twine check dist/*
